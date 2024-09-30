@@ -1,0 +1,8 @@
+ch1
+------
+1- JavaScript was initially created to "make web pages alive"
+2- The browser has an embedded engine sometimes called a "JavaScript virtual machine". Different engines have different "codenames". For example:
+  - V8 -- in Chrome, Opera and Edge.
+  - SpiderMonkey -- in Firefox.
+  - There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+
