@@ -7,13 +7,25 @@
   </head>
   <body>
     <script>
-      console.log("hello it's me");
-      //   ---variable ---
-      var name = "Ahmed";
-      var salary =5000;
-      var age =28;
-      console.log(`Name  : ${name},, salary: ${salary} ,, age: ${age}`);
-      
+      var number1 = 10;
+      var number2 = 4;
+      var sum = number1 + number2;
+      var sub = number1 - number2;
+      var multi = number1 * number2;
+      var div = number1 / number2;
+      var mod = number1 % number2;
+      var msg = `Number one is : ${number1}\nNumber two is : ${number2}
+                \n===================\nsum : ${sum} \nsub : ${sub} \nmulti : ${multi}  \ndiv : ${div}  \nmod : ${mod}`;
+      console.log(msg);
+      //  document.write(msg);
+      var _el = document.createElement("h4");
+      _el.textContent = msg;
+      document.body.appendChild(_el);
+      // _el.innerText = "sss";
+      // _el.
+      // _el.innerHTML = msg;
+      _el.style.color = "red";
+      _el.style.fontWeight = "small";
     </script>
   </body>
 </html>
