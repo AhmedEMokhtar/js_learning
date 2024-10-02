@@ -6,8 +6,34 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="text" name="msg_text" id="msg_text"  />
+    <input type="button" value="Show Result" onclick="_show_result()" />
+    <h3 id="result"></h3>
     <script>
-    
+      // challedge 4 ---strings
+      // get the text fromm the html and apply this operation on it
+      function _show_result() {
+        var hrEl = document.getElementById("msg_text");
+
+        var msg = hrEl.value;
+        console.log(msg);
+
+        // ---make all chars captals
+        var msgUpper = msg.toUpperCase();
+        console.log(msgUpper);
+        //--- replace each o char with y
+        var msgReplace = msg.replace("o", "y").toUpperCase();
+        console.log(msgReplace);
+        // --- reverse the msg
+        var msgReverse = msgReplace.split("").reverse().join("");
+        console.log(msgReverse);
+
+        // update result
+        var result = document.getElementById("result");
+        result.innerText = `${msgUpper}\n \n${msgReplace} \n\n ${msgReverse}`;
+        result.style.color = "blue";
+        console.log(result);
+      }
     </script>
   </body>
 </html>
