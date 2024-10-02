@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hello World</h2>
+    <h3 id="result">Hello World</h3>
+    <script>
+      // challedge 4 ---strings
+      // get the text fromm the html and apply this operation on it
+      var hrEl = document.querySelector("h2");
+      var msg = hrEl.innerText;
+
+      // ---make all chars captals
+      var msgUpper = msg.toUpperCase();
+      console.log(msgUpper);
+      //--- replace each o char with y
+      var msgReplace = msg.replace("o", "y").toUpperCase();
+      console.log(msgReplace);
+      // --- reverse the msg
+      var msgReverse = msgReplace.split("").reverse().join("");
+      console.log(msgReverse);
+
+      // update result
+      var result = document.getElementById("result");
+      result.innerText = `${msgUpper}\n \n${msgReplace} \n\n ${msgReverse}`;
+      result.style.color = "blue";
+      console.log(result);
+    </script>
+  </body>
+</html>
