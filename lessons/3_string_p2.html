@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="msg_text" id="msg_text" />
+    <input type="button" value="Show Result" />
+    <h3 id="result"></h3>
+    <script>
+      // almost all built in function is js
+      var msg = "Hello World";
+      console.log(msg.toLocaleUpperCase());
+      console.log(msg.toLocaleLowerCase());
+      console.log(msg.toLowerCase());
+      console.log(msg.toUpperCase());
+      console.log(msg.charAt(1));
+      console.log(msg.charCodeAt(1));
+      console.log(msg.codePointAt(1)); //
+      console.log(msg.endsWith("ld")); //
+      console.log(msg.includes("or")); //
+      console.log(msg.indexOf("o")); //
+      console.log(msg.lastIndexOf("l")); //
+      console.log(msg.length); //
+      console.log(msg.padEnd(30, "#")); //
+      console.log(msg.padStart(30, "#")); //
+      console.log(msg.repeat(3)); // repeate text many numbers
+      console.log(msg.replace('o',' ')); //   replace string with another 
+      console.log(msg.search('frl')); // -1 if not exist index if exist 
+      console.log(msg.slice(1, 5)); // 1 to 5
+      console.log(msg.split(' ')); // split string to array
+      console.log(msg.startsWith("He")); // true or false
+      console.log(msg.substring(1, 5)); // 1 to 5
+      console.log(msg.trim()); // remove space
+      console.log(msg.trimEnd()); // remove space from end
+      console.log(msg.trimStart()); // remove space from start
+      console.log(msg.trimLeft()); // remove space from start
+      console.log(msg.trimRight()); // remove space from end
+      console.log(msg.valueOf()); // return string
+      console.log(msg);
+   
+    </script>
+  </body>
+</html>
