@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100%;
+        background-color: greenyellow;
+        height: 400px;
+        text-align: center;
+      "
+    >
+      Tall
+      <input
+        type="number"
+        name="tall_value"
+        id="tall_value"
+        style="margin-top: 10%"
+      />
+      <br />
+      Weight
+      <input
+        type="number"
+        name="weight_value"
+        id="weight_value"
+        style="margin-top: 10%"
+      />
+      <br />
+      <input
+        type="button"
+        style="margin-top: 10%"
+        value="Calculate"
+        id="calc_bmi"
+      />
+      <br />
+      <h3 id="result"></h3>
+    </div>
+    <script>
+      var age = 17;
+      switch (true) {
+        case age <= 15:
+          console.log("child");
+          break;
+        case age <= 20:
+          console.log("ddd");
+          break;
+
+        default:
+          console.log("default");
+          break;
+      }
+    </script>
+  </body>
+</html>
