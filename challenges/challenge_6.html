@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100%;
+        background-color: greenyellow;
+        height: 400px;
+        text-align: center;
+      "
+    >
+      Tall
+      <input
+        type="number"
+        name="tall_value"
+        id="tall_value"
+        style="margin-top: 10%"
+      />
+      <br />
+      Weight
+      <input
+        type="number"
+        name="weight_value"
+        id="weight_value"
+        style="margin-top: 10%"
+      />
+      <br />
+      <input
+        type="button"
+        style="margin-top: 10%"
+        value="Calculate"
+        id="calc_bmi"
+      />
+      <br />
+      <h3 id="result"></h3>
+    </div>
+    <script>
+      document.getElementById("calc_bmi").addEventListener("click", () => {
+        var tall = document.getElementById("tall_value").value;
+        var weight = document.getElementById("weight_value").value;
+        var equation_result = 0;
+        if (tall && weight) {
+          equation_result = weight / ((tall / 100) * (tall / 100));
+        }
+        var result = document.getElementById("result");
+        if (equation_result > 0 && equation_result <= 18.9) {
+          result.innerHTML = `Your BMI is:   ${equation_result} <br>  نحافة`;
+        } else if (equation_result > 18.9 && equation_result <= 24.9) {
+          result.innerHTML = `Your BMI is:   ${equation_result} <br>  مثالي`;
+        } else if (equation_result > 24.9 && equation_result <= 29.9) {
+          result.innerHTML = `Your BMI is:   ${equation_result}<br>   وزن زائد`;
+        } else if (equation_result > 29.9 && equation_result <= 34.9) {
+          result.innerHTML = `Your BMI is:   ${equation_result} <br>  سمنة درجة أولي`;
+        } else if (equation_result > 34.9 && equation_result <= 39.9) {
+          result.innerHTML = `Your BMI is:   ${equation_result} <br>   سمنة درجة ثانية`;
+        } else if (equation_result >= 40) {
+          result.innerHTML = `Your BMI is:   ${equation_result} <br>    سمنة خطيرة`;
+        }
+      });
+      // function _calc_bmi() {
+
+      // }
+    </script>
+  </body>
+</html>
