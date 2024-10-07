@@ -8,51 +8,39 @@
   <body>
     <div
       style="
-        width: 100%;
-        background-color: greenyellow;
-        height: 400px;
         text-align: center;
+        background-color: aquamarine;
+        height: 300px;
+        padding-top: 50px;
       "
     >
-      Tall
-      <input
-        type="number"
-        name="tall_value"
-        id="tall_value"
-        style="margin-top: 10%"
-      />
-      <br />
-      Weight
-      <input
-        type="number"
-        name="weight_value"
-        id="weight_value"
-        style="margin-top: 10%"
-      />
-      <br />
-      <input
-        type="button"
-        style="margin-top: 10%"
-        value="Calculate"
-        id="calc_bmi"
-      />
-      <br />
-      <h3 id="result"></h3>
+      <input type="text" name="student" id="student_inp" />
+      <input type="button" value="Submit" name="Submit" id="submit_btn" />
+      <input type="button" value="Delete" name="delete" id="delete_btn" />
+      <p id="student_array"></p>
     </div>
     <script>
-      var age = 17;
-      switch (true) {
-        case age <= 15:
-          console.log("child");
-          break;
-        case age <= 20:
-          console.log("ddd");
-          break;
-
-        default:
-          console.log("default");
-          break;
-      }
+      var students = [];
+      // addd
+      document
+        .getElementById("submit_btn")
+        .addEventListener("click", function () {
+          var std_name = document.getElementById("student_inp").value;
+          if (std_name) {
+            students.push(std_name);
+            document.getElementById("student_array").innerHTML = students;
+          }
+          document.getElementById("student_inp").value = "";
+        });
+      //delete
+      document
+        .getElementById("delete_btn")
+        .addEventListener("click", function () {
+          if (students.length > 0) {
+            students.pop();
+            document.getElementById("student_array").innerHTML = students;
+          }
+        });
     </script>
   </body>
 </html>
