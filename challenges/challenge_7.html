@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        text-align: center;
+        background-color: aquamarine;
+        height: 300px;
+        padding-top: 50px;
+      "
+    >
+      <input type="text" name="student" id="student_inp" />
+      <input type="button" value="Submit" name="Submit" id="submit_btn" />
+      <input type="button" value="Delete" name="delete" id="delete_btn" />
+      <p id="student_array"></p>
+    </div>
+    <script>
+      var students = [];
+      // addd
+      document
+        .getElementById("submit_btn")
+        .addEventListener("click", function () {
+          var std_name = document.getElementById("student_inp").value;
+          if (std_name) {
+            students.push(std_name);
+            document.getElementById("student_array").innerHTML = students;
+          }
+          document.getElementById("student_inp").value = "";
+        });
+      //delete
+      document
+        .getElementById("delete_btn")
+        .addEventListener("click", function () {
+          if (students.length > 0) {
+            students.pop();
+            document.getElementById("student_array").innerHTML = students;
+          }
+        });
+    </script>
+  </body>
+</html>
