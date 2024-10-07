@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><p id="students" /></div>
+    <script>
+      // array
+      var students = ["ahmed", "ali", "shehab", "hani"];
+      // loop
+      document.getElementById("students").innerHTML = students.join(" - ");
+      //operatoin on array
+      var firstStudent = students[0];
+      var lastStudent = students[students.length - 1];
+      console.log(students); //  [ 'ahmed', 'ali', 'shehab', 'hani' ]
+      console.log(firstStudent); //   ahmed
+      console.log(lastStudent); //    hani
+      console.log(students.length);  // 4
+      students.sort();  // sort array 
+      students.pop();   // delete last element
+      console.log(students);  //  [ 'ahmed', 'ali', 'shehab' ]
+      students.push("memo");  //  add element
+      console.log(students);   //  [ 'ahmed', 'ali', 'shehab', 'memo' ]
+      students.shift();   // delete first element
+      console.log(students);   //  [ 'ali', 'shehab', 'memo' ]
+      students.unshift('ssss');   // add element at the begining
+      console.log(students);    //  [ 'ssss', 'ali', 'shehab', 'memo' ]
+      students.splice(3,1,'mostafa')  //  delete hani  and insert mostafa
+      console.log(students);   // ["ahmed", "ali", "shehab"]
+      
+    </script>
+  </body>
+</html>
