@@ -6,41 +6,11 @@
     <title>Document</title>
   </head>
   <body>
-    <div
-      style="
-        text-align: center;
-        background-color: aquamarine;
-        height: 300px;
-        padding-top: 50px;
-      "
-    >
-      <input type="text" name="student" id="student_inp" />
-      <input type="button" value="Submit" name="Submit" id="submit_btn" />
-      <input type="button" value="Delete" name="delete" id="delete_btn" />
-      <p id="student_array"></p>
-    </div>
     <script>
-      var students = [];
-      // addd
-      document
-        .getElementById("submit_btn")
-        .addEventListener("click", function () {
-          var std_name = document.getElementById("student_inp").value;
-          if (std_name) {
-            students.push(std_name);
-            document.getElementById("student_array").innerHTML = students;
-          }
-          document.getElementById("student_inp").value = "";
-        });
-      //delete
-      document
-        .getElementById("delete_btn")
-        .addEventListener("click", function () {
-          if (students.length > 0) {
-            students.pop();
-            document.getElementById("student_array").innerHTML = students;
-          }
-        });
+      var nums = [1, 2, 3, 4, 5, 6];
+      console.log(nums.concat(7,8,9));  // [1, 2, 3, 4, 5, 6,   
+      console.log(nums.fill(15,5,6));  // fill 15 in the range of 2 to 6
+      console.log(nums.includes(4));          
     </script>
   </body>
 </html>
