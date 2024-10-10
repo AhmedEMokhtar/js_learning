@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result" style="text-align: center"></div>
+    <script>
+      // extra types of for
+      // normal one
+      var name = "Ahmed Elsayed Mokhtar";
+      // for (let index = 0; index < name.length; index++) {
+      //   console.log(name[index]);
+      // }
+
+      //for in
+
+      // for (const key in name) {
+      // //  console.log(key);  //  index
+      //  console.log(name[key]);  //    value
+      // }
+
+      //for of
+
+      for (const key of name) {
+        //  console.log(name[key]);  // undefiend
+        console.log(key); //      value
+      }
+    </script>
+  </body>
+</html>
