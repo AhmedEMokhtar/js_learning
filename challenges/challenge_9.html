@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h3 id="label"></h3>
+      <input
+        type="text"
+        id="input_field"
+        name="text"
+        placeholder="enter your text"
+      />
+      <input type="submit" id="btn_submit" name="btn" />
+      <h4 id="result"></h4>
+    </div>
+    <script>
+      var vowel_letters = ["A", "E", "I", "O", "U"];
+      document.getElementById(
+        "label"
+      ).innerHTML = `Vowel Letters : (${vowel_letters})`;
+      document.getElementById("btn_submit").addEventListener("click", () => {
+        var input_val = document.getElementById("input_field").value;
+        // code to extract non vowel letter from the sentance
+        if (input_val) {
+          for (const element of input_val.toUpperCase()) {
+            if (!vowel_letters.includes(element)) {
+              document.getElementById("result").innerHTML += `${element}</br>`;
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
