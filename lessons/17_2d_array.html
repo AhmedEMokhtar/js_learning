@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <p id="students_names"></p>
+    </div>
+    <script>
+      // /\\\\ 2d array
+      var school_classes = [
+        ["Yarob", "Ahmed", "Khaled"],
+        ["Omar", "Jaber"],
+        ["Sami", "Salem"],
+      ];
+      for (let index = 0; index < school_classes.length; index++) {
+        document.getElementById("students_names").innerHTML += `class: ${
+          index + 1
+        } <br/>
+      ${school_classes[index]} <br/>
+        `;
+      }
+    </script>
+  </body>
+</html>
