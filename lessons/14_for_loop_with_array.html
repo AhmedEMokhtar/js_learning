@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h4 id="result" style="text-align: start"></h4>
+    </div>
+    <script>
+      var school_members = ["T.Ahmed", "T.Alaa", "mohamed", "khaled", "hazem"];
+      school_members.forEach((element) => {
+        if (element.startsWith("T")) {
+          var x = (document.getElementById(
+            "result"
+          ).innerHTML += `Teacher : ${element}<br/>`);
+        } else {
+          document.getElementById(
+            "result"
+          ).innerHTML += `student : ${element}<br/>`;
+        }
+      });
+    </script>
+  </body>
+</html>
