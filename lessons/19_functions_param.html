@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2 id="header_of_table"></h2>
+      <p id="body_of_table"></p>
+    </div>
+    <script>
+      function sum(n1, n2) {
+        let result = n1 + n2;
+        console.log("The sum is : " + result);
+      }
+      function sub(n1, n2) {
+        let result = n1 - n2;
+        console.log("The sub is : " + result);
+      }
+      function multi(n1, n2) {
+        let result = n1 * n2;
+        console.log("The multi is : " + result);
+      }
+      function div(n1, n2) {
+        let result = n1 / n2;
+        console.log("The div is : " + result);
+      }
+      function mod(n1, n2) {
+        let result = n1 % n2;
+        console.log("The mod is : " + result);
+      }
+
+      function calculator(n1, n2) {
+        sum(n1, n2);
+        sub(n1, n2);
+        multi(n1, n2);
+        div(n1, n2);
+        mod(n1, n2);
+      }
+      calculator(100, 23);
+    </script>
+  </body>
+</html>
