@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2 id="header_of_table"></h2>
+      <p id="body_of_table"></p>
+    </div>
+    <script>
+      // anonymous function
+      // callback function
+
+      let arr = [10, 20, 30, 40];
+      arr.forEach((el, index) => {
+        console.log(el * index);
+      });
+      console.log("=".repeat(20));
+      arr.forEach((el) => {
+        console.log(el * 10);
+      });
+
+      setTimeout(() => {
+        console.log("hi");
+        
+      }, 3000);
+
+      setInterval(() => {
+         console.log("hi2");
+      }, 2000);
+    </script>
+  </body>
+</html>

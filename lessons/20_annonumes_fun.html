@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2 id="header_of_table"></h2>
+      <p id="body_of_table"></p>
+    </div>
+    <script>
+      // anonymous function
+
+      function callAnotherFunct(calledFunc) {
+        console.log("hhhhhhhhhhhhhhhhhhhh");
+        calledFunc();
+        console.log("hhhhhhhhhhhhhhhhhhhh");
+      }
+      callAnotherFunct(() => {
+        console.log("hello" + " " + "world");
+      });
+    </script>
+  </body>
+</html>
