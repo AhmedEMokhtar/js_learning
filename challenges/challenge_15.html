@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- make table with border  with wide cells-->
+      <table
+        border="1"
+        style="border-collapse: collapse; background-color: antiquewhite;width: 40%;"
+      >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="name_field"></td>
+            <td id="age_field"></td>
+            <td id="year_field"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      // object challenge
+      const school_students = [
+        { name: "John", age: 20, year: 2004 },
+        { name: "Jane", age: 21, year: 2004 },
+        { name: "Bob", age: 19, year: 2002 },
+        { name: "Alice", age: 22, year: 2003 },
+        { name: "Mike", age: 20, year: 2001 },
+        { name: "ahmed", age: 10, year: 2000 },
+      ];
+      for (const student of school_students) {
+        document.getElementById("name_field").innerHTML +=
+          student.name + "<br>";
+        document.getElementById("age_field").innerHTML += student.age + "<br>";
+        document.getElementById("year_field").innerHTML +=
+          student.year + "<br>";
+      }
+    </script>
+  </body>
+</html>
