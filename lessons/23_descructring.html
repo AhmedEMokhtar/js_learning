@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- make table with border  with wide cells-->
+    </div>
+    <script>
+      //destructing
+      let user = {
+        name: "ahmed",
+        email: "ahmed@dd.com",
+        address: {
+          main: "fayoum",
+          secondery: "cairo",
+        },
+      };
+      let {
+        name,
+        email,
+        address: { main },
+      } = user;
+      console.log(name, email, main);
+
+      let numbers = [10, 20, 30];
+      let [first, second, third] = numbers;
+      console.log(first, second, third);
+    </script>
+  </body>
+</html>
