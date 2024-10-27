@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- make table with border  with wide cells-->
+    </div>
+    <script>
+      //  pass by value , pass by reference
+      //pass by reference for array (obj type) and object only and other datatype is pass by value
+      let user = {
+        name: "ahmed",
+      };
+      let new_user = user;
+      user["age"] = 21;
+
+      console.log(user);
+      console.log(new_user);
+
+
+      // pass by value
+      let x = 10;
+      let y = x;
+      x = 20;
+
+      console.log(x);
+      console.log(y);
+    </script>
+  </body>
+</html>
