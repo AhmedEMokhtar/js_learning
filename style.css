@@ -1,0 +1,94 @@
+body {
+  background-color: rgb(175, 88, 238);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.tasks_table {
+  width: 60%;
+  /* height: 500px; */
+  text-align: center;
+  background-color: white;
+}
+.header {
+  width: 100%;
+  background-color: indigo;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.title {
+  display: inline;
+}
+.add_btn {
+  float: right;
+  margin-top: 3px;
+  color: indigo;
+  margin-right: 10px;
+  border: none;
+  border-radius: 50%;
+}
+.tasks {
+  display: flex;
+  background-color: #ddd;
+  margin: 6px;
+  border-bottom: solid 1px #535151;
+  transition: all 0.3s;
+}
+.task {
+  text-align: start; 
+  width: 70%;
+  padding-left: 4px;
+}
+.tasks:hover{
+    box-shadow:  0 0 10px rgba(255,0,0,0.2);
+}
+.actions {
+  display: flex;
+   width: 25%;
+  justify-content: space-between;
+  align-items: center;
+}
+.add {
+  border-radius: 50%;
+  border: none;
+  background-color: green;
+  color: white;
+  margin: 2px;
+}
+.edit {
+  border-radius: 50%;
+  border: none;
+  background-color: blue;
+  color: white;
+  margin: 2px;
+}
+.delete {
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  color: white;
+  margin: 2px;
+}
+/* #header {
+     background-color: indigo;
+  width: 60%;
+  display: flex;
+  justify-content:center;
+  background-color: indigo;
+  color: white;
+}
+#header h3 {
+    margin-right: 10%;
+  text-align: center;
+}
+#add_btn {
+  float: right;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+} */

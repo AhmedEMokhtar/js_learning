@@ -4,12 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="container">
-      <div id="part1"></div>
-      <div id="part2"></div>
+    <!-- center div -->
+    <div class="container">
+      <!-- tasks table div -->
+      <div class="tasks_table">
+        <!-- header div -->
+        <div class="header">
+          <h3 class="title" t>Todo</h3>
+          <button class="add_btn">+</button>
+        </div>
+        <!-- // header div //-->
+
+        <!-- tasks div -->
+        <div class="tasks">
+          <!-- task div -->
+          <div class="task">
+              <h2>task 1</h2>
+              <div>
+                <span> 2-11-2014 </span>
+              </div>
+          </div>
+          <div class="actions">
+            <button class="add">+</button>
+            <button class="edit">+</button>
+            <button class="delete">+</button>
+          </div>
+        </div>
+        <!-- // tasks div // -->
+      </div>
+      <!-- //tasks table div// -->
     </div>
+    <!-- //center div// -->
     <script src="main.js"></script>
   </body>
 </html>

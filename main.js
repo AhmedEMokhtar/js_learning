@@ -1,37 +1,37 @@
-// part 1
+// // ---style body-----
+// document.body.style.cssText = `background-color:indigo`;
 
-let body = document.body;
-let part1 = document.getElementById("part1");
-let inputField = document.createElement("input");
-part1.style.cssText = `margin:2px;background-color:indigo;height:50%;padding:15%`;
-inputField.placeholder = "Enter Name";
-part1.appendChild(inputField);
+// // ----- create container of tasks--------
+// const container = document.createElement("div");
+// const header = document.createElement("h3");
+// const header_text = document.createTextNode("To-do List");
+// header.appendChild(header_text);
+// container.appendChild(header);
+// document.body.appendChild(container);
+// // ---style container of tasks--------
+// container.style.cssText = `background-color:lightblue;text-align:center;margin:10%; padding: 20px; border:1px solid whtie`;
+// const todo_list = ["h1", "h2", "h3"];
+// // ---create list of tasks--------
+// const list = document.createElement("ul");
+// list.style.listStyle = 'none';
+// const task_container = document.createElement('div');
+// task_container.style.cssText = `display:flex;flex-direction:column;align-items:start;`;
+// container.appendChild(task_container);
+// task_container.appendChild(list);
+// // ---create task elements--------
+// for (let i = 0; i < todo_list.length; i++) {
+//   const task = document.createElement("li");
+//   task.style.cssText=`background-color:white;width:350px;margin:4px`;
+//   const task_text = document.createTextNode(todo_list[i]);
+//   task.appendChild(task_text);
+//   list.appendChild(task);
+//   }
 
-let btnSave = document.createElement("input");
-btnSave.type = "submit";
-btnSave.value = "Save";
-part1.appendChild(btnSave);
+// // for (const el of todo_list) {
+// //   const item = document.createElement("li");
+// //   item.style.cssText = `background-color:lightgreen; padding:10px; border:1px solid white`;
+// //   const text = document.createTextNode(el);
+// //   list.appendChild(text);
+// // }
 
-let resultArea = document.createElement("p");
-resultArea.style.cssText = "margin-top:5%;text-align:center;color:white";
-part1.appendChild(resultArea);
-
-inputField.addEventListener("mouseover", () => {
-  resultArea.innerHTML = "";
-});
-inputField.addEventListener("mouseleave", () => {
-  resultArea.innerHTML = inputField.value ? inputField.value : "";
-});
-
-// --------------------part 2---------------------
-
-let part2 = document.getElementById("part2");
-let warningMsg = document.createElement("p");
-warningMsg.style.cssText = "margin-top:5%;text-align:center;color:black";
-
-warningMsg.innerHTML = "ادخل الاسم"
-
-part2.appendChild(warningMsg);
-
-body.appendChild(part1);
-body.appendChild(part2);
+// // container.appendChild(list);
