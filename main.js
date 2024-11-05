@@ -1,37 +1,68 @@
-// // ---style body-----
-// document.body.style.cssText = `background-color:indigo`;
+let tasks = [
+  {
+    id: 1,
+    title: "read a book",
+    date: "20/10/2024",
+    is_completed: false,
+  },
+  {
+    id: 2,
+    title: "read a story",
+    date: "21/10/2024",
+    is_completed: false,
+  },
+  {
+    id: 3,
+    title: "read a novel",
+    date: "22/10/2024",
+    is_completed: false,
+  },
+];
+// document.body.onload = rednder_tasks(tasks);
 
-// // ----- create container of tasks--------
-// const container = document.createElement("div");
-// const header = document.createElement("h3");
-// const header_text = document.createTextNode("To-do List");
-// header.appendChild(header_text);
-// container.appendChild(header);
-// document.body.appendChild(container);
-// // ---style container of tasks--------
-// container.style.cssText = `background-color:lightblue;text-align:center;margin:10%; padding: 20px; border:1px solid whtie`;
-// const todo_list = ["h1", "h2", "h3"];
-// // ---create list of tasks--------
-// const list = document.createElement("ul");
-// list.style.listStyle = 'none';
-// const task_container = document.createElement('div');
-// task_container.style.cssText = `display:flex;flex-direction:column;align-items:start;`;
-// container.appendChild(task_container);
-// task_container.appendChild(list);
-// // ---create task elements--------
-// for (let i = 0; i < todo_list.length; i++) {
-//   const task = document.createElement("li");
-//   task.style.cssText=`background-color:white;width:350px;margin:4px`;
-//   const task_text = document.createTextNode(todo_list[i]);
-//   task.appendChild(task_text);
-//   list.appendChild(task);
-//   }
 
-// // for (const el of todo_list) {
-// //   const item = document.createElement("li");
-// //   item.style.cssText = `background-color:lightgreen; padding:10px; border:1px solid white`;
-// //   const text = document.createTextNode(el);
-// //   list.appendChild(text);
-// // }
+document.getElementById("add_btn").addEventListener("click", () => {
+  let title = prompt("enter your messaeg");
+  console.log(title);
+  if (title) {
+    tasks.push({
+      id: tasks.length + 1,
+      title: title,
+      date: Date.now(),
+      is_completed: false,
+    });
+  }
+  rednder_tasks(tasks);
+});
+function rednder_tasks(tasks) {
+  for (const task of tasks) {
+    let task_content = `
+      <div id="task">
+            <!-- task div -->
+            <div class="content">
+              <h2 id="title">${task.title}</h2>
+              <div>
+                <span class="material-symbols-outlined"> calendar_month </span>
+                <span id="date">${task.date}</span>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="add">
+                <span class="material-symbols-outlined"> check </span>
+              </button>
 
-// // container.appendChild(list);
+              <button class="edit">
+                <span class="material-symbols-outlined"> edit </span>
+              </button>
+              <button class="delete">
+                <span class="material-symbols-outlined"> delete </span>
+              </button>
+            </div>
+          </div>
+
+    `;
+    document.getElementById("tasks").innerHTML += task_content;
+  }
+}
+
+console.log(tasks);
