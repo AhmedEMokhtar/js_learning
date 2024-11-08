@@ -18,51 +18,55 @@ let tasks = [
     is_completed: false,
   },
 ];
-// document.body.onload = rednder_tasks(tasks);
-
 
 document.getElementById("add_btn").addEventListener("click", () => {
-  let title = prompt("enter your messaeg");
-  console.log(title);
+  let title = prompt("Enter your message");
   if (title) {
     tasks.push({
       id: tasks.length + 1,
       title: title,
-      date: Date.now(),
+      date: new Date().toLocaleDateString("en-GB"), // Formats date as dd/mm/yyyy
       is_completed: false,
     });
   }
-  rednder_tasks(tasks);
+  render_tasks();
 });
-function rednder_tasks(tasks) {
-  for (const task of tasks) {
+
+function render_tasks() {
+  const tasksContainer = document.getElementById("tasks");
+  tasksContainer.innerHTML = ""; // Clear previous tasks
+
+  tasks.forEach((task, index) => {
     let task_content = `
       <div id="task">
-            <!-- task div -->
-            <div class="content">
-              <h2 id="title">${task.title}</h2>
-              <div>
-                <span class="material-symbols-outlined"> calendar_month </span>
-                <span id="date">${task.date}</span>
-              </div>
-            </div>
-            <div class="actions">
-              <button class="add">
-                <span class="material-symbols-outlined"> check </span>
-              </button>
-
-              <button class="edit">
-                <span class="material-symbols-outlined"> edit </span>
-              </button>
-              <button class="delete">
-                <span class="material-symbols-outlined"> delete </span>
-              </button>
-            </div>
+        <div class="content">
+          <h2 id="title">${task.title}</h2>
+          <div>
+            <span class="material-symbols-outlined"> calendar_month </span>
+            <span id="date">${task.date}</span>
           </div>
-
+        </div>
+        <div class="actions">
+          <button class="add">
+            <span class="material-symbols-outlined"> check </span>
+          </button>
+          <button class="edit">
+            <span class="material-symbols-outlined"> edit </span>
+          </button>
+          <button onclick="delete_task(${index})" class="delete">
+            <span class="material-symbols-outlined"> delete </span>
+          </button>
+        </div>
+      </div>
     `;
-    document.getElementById("tasks").innerHTML += task_content;
-  }
+    tasksContainer.innerHTML += task_content;
+  });
 }
 
-console.log(tasks);
+function delete_task(index) {
+  tasks.splice(index, 1); // Remove task at the specified index
+  render_tasks(); // Re-render tasks list
+}
+
+// Initial render
+render_tasks();
