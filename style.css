@@ -3,29 +3,38 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
+  padding: 0;
 }
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10%;
 }
+
 .tasks_table {
   width: 60%;
-  /* height: 500px; */
   text-align: center;
   background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
+
 .header {
   width: 100%;
   background-color: indigo;
   color: white;
-  padding-top: 8px;
-  padding-bottom: 10px;
+  padding: 10px 0;
+  font-size: 1.5em;
 }
+
 .title {
   display: inline;
 }
+
 #add_btn {
   float: right;
   margin-top: 3px;
@@ -33,66 +42,72 @@ body {
   margin-right: 10px;
   border: none;
   border-radius: 50%;
-  line-height: 0;
-}
-#task {
-  display: flex;
-  background-color: #ddd;
-  margin: 6px;
-  border-bottom: solid 1px #535151;
-  transition: all 0.3s;
-}
-.content {
-  text-align: start; 
-  width: 70%;
-  padding-left: 4px;
-}
-#task:hover {
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-}
-.actions {
-  display: flex;
-  width: 20%;
-  justify-content: space-between;
-  align-items: center;
-}
-.add {
-  border-radius: 50%;
-  border: none;
-  background-color: green;
-  color: white;
-  margin: 2px;
-}
-.edit {
-  border-radius: 50%;
-  border: none;
-  background-color: blue;
-  color: white;
-  margin: 2px;
-}
-.delete {
-  border-radius: 50%;
-  border: none;
-  background-color: red;
-  color: white;
-  margin: 2px;
-}
-/* #header {
-     background-color: indigo;
-  width: 60%;
-  display: flex;
-  justify-content:center;
-  background-color: indigo;
-  color: white;
-}
-#header h3 {
-    margin-right: 10%;
-  text-align: center;
-}
-#add_btn {
-  float: right;
   background-color: white;
   width: 40px;
   height: 40px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  background-color: #ddd;
+  margin: 8px;
+  padding: 8px;
+  border-bottom: solid 1px #535151;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.task.done {
+  background-color: #30f719;
+}
+
+.content {
+  text-align: start;
+  width: 70%;
+  padding-left: 4px;
+}
+
+.task:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+.actions {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button.complete,
+button.cancel,
+button.edit,
+button.delete {
   border-radius: 50%;
-} */
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+button.complete {
+  background-color: green;
+}
+
+button.cancel {
+  background-color: rgb(238, 44, 44);
+}
+
+button.edit {
+  background-color: blue;
+}
+
+button.delete {
+  background-color: red;
+}
